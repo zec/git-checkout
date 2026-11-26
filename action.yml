@@ -1,0 +1,16 @@
+# GitHub Action/Forgejo Action for checking out a Git repository for CI.
+#
+# Copyright (c) 2026 Zachary Catlin and contributors.
+# SPDX-License-Identifier: MIT
+
+name: 'Git checkout'
+inputs:
+  repo:
+  rev:
+  token:
+  directory:
+runs:
+  using: 'composite'
+  steps:
+    - shell: sh
+      run: '. "${GITHUB_ACTION_PATH}/main.sh"'
